@@ -2,7 +2,7 @@ package com.company;
 
 public class GamePiece {
 
-    int[][] magicSquare = new int[][]
+    static int[][] magicSquare = new int[][]
             {
                     {4, 9, 2},
                     {3, 5, 7},
@@ -17,5 +17,9 @@ public class GamePiece {
         this.slot = slot;
         magicValue = magicSquare[((int)(slot/3.1))][(int)Math.ceil((double)slot%3.1)-1];
 
+    }
+
+    public static int[][] getMagicSquare(){
+        return magicSquare;
     }
 }
